@@ -65,10 +65,18 @@ body {
   width: 250px;
 }
 .hero__content__title {
+  color: #334257;
   font-size: 6rem;
+}
+.hero__content__subtitle {
+  color: black;
 }
 .hero__content__join-button {
   padding: 0.5rem 0;
+}
+
+.container {
+  padding: 0 7rem;
 }
 
 .nav {
@@ -123,6 +131,53 @@ body {
   width: calc(100% - .5rem);
   left: 0.25rem;
   padding-top: 1.25rem;
+}
+
+.brand-content {
+  display: flex;
+  flex-direction: column;
+}
+.brand-content__right-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.brand-content__right-img__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.brand-content__right-img__left__title {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #334257;
+}
+.brand-content__right-img__left__content {
+  padding: 0.25rem 0;
+}
+.brand-content__right-img__right__img {
+  max-width: 400px;
+}
+.brand-content__left-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.brand-content__left-img__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.brand-content__left-img__right__title {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #334257;
+}
+.brand-content__left-img__right__content {
+  padding: 0.25rem 0;
+}
+.brand-content__left-img__left__img {
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
