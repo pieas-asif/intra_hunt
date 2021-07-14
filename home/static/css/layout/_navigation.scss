@@ -1,0 +1,64 @@
+@import "../abstract/variables";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: $height-navbar;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__img {
+      width: 48px;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 0 .5rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+
+    &__link {
+      padding: 0 .5rem;
+      text-decoration: none;
+      color: darken($color-primary, 20%);
+      position: relative;
+      transition-delay: 100ms;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: calc(100% - 1rem);
+        padding: 1px;
+        left: .5rem;
+        border-radius: 5px;
+        bottom: 0;
+        background-color: darken($color-primary, 20%);
+        z-index: -1;
+        transition: left 100ms ease-in, width 100ms ease-in, padding-top 150ms ease-in 100ms;
+      }
+
+      &:hover {
+        color: white;
+
+        &::before {
+          width: calc(100% - .5rem);
+          left: .25rem;
+          padding-top: 1.25rem;
+        }
+      }
+    }
+  }
+}

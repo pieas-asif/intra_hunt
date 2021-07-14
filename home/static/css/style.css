@@ -9,6 +9,11 @@ body {
   font-family: "Roboto Slab", serif;
 }
 
+.container {
+  padding: 0 7rem;
+  min-height: calc(100vh - 15rem);
+}
+
 .btn {
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -75,15 +80,12 @@ body {
   padding: 0.5rem 0;
 }
 
-.container {
-  padding: 0 7rem;
-}
-
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0 2rem;
+  height: 5rem;
   align-items: center;
 }
 .nav__logo {
@@ -131,6 +133,38 @@ body {
   width: calc(100% - .5rem);
   left: 0.25rem;
   padding-top: 1.25rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #00b2ff;
+  min-height: 10rem;
+  padding: 3rem 7rem;
+}
+.footer__section-one {
+  display: flex;
+  flex-direction: row;
+}
+.footer__section-one__brand {
+  display: flex;
+  flex-direction: column;
+}
+.footer__section-one__brand__identity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__section-one__brand__identity__logo {
+  width: 50px;
+}
+.footer__section-one__brand__link-cols {
+  display: flex;
+  flex-direction: row;
+}
+.footer__section-one__brand__link-cols__col {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-content {
