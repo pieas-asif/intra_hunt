@@ -3,18 +3,24 @@
 .footer {
   display: flex;
   flex-direction: column;
-  //background-color: $color-complementary-dark;
-  background-color: $color-secondary;
+  background-color: $color-primary;
   min-height: $height-footer;
   padding: 3rem 7rem;
+  margin: 0 7rem 2rem 7rem;
+  border-radius: 5px;
 
   &__section-one {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
 
     &__brand {
       display: flex;
       flex-direction: column;
+      padding: 1rem 0;
+      row-gap: 1rem;
 
       &__identity {
         display: flex;
@@ -22,16 +28,92 @@
         align-items: center;
 
         &__logo {
-          width: 50px;
+          //width: 50px;
+        }
+
+        &__name {
+          color: $color-white;
+          font-size: 2rem;
         }
       }
+
       &__link-cols {
         display: flex;
         flex-direction: row;
+        column-gap: 2rem;
+        justify-content: space-between;
 
         &__col {
           display: flex;
           flex-direction: column;
+          row-gap: .75rem;
+
+          &__link {
+            text-decoration: none;
+            cursor: pointer;
+            color: $color-white;
+          }
+
+        }
+      }
+    }
+
+    &__newsletter {
+      display: flex;
+      flex-direction: column;
+      row-gap: .25rem;
+      align-items: flex-start;
+
+      &__title {
+        color: $color-white;
+      }
+
+      &__form {
+        align-self: stretch;
+      }
+    }
+  }
+
+  &__section-two {
+    display: flex;
+    border-top: 1px solid $color-white;
+    padding: 1rem 0;
+    flex-direction: column;
+
+    &__important-links {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1rem;
+
+      &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-size: .8rem;
+      }
+    }
+
+    &__copyright-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__copyright {
+        &__text {
+          color: $color-white;
+          font-size: .8rem;
+        }
+      }
+
+      &__socials {
+        display: flex;
+        flex-direction: row;
+        column-gap: .5rem;
+
+        &__link {
+          text-decoration: none;
+          color: $color-white;
+          font-size: 1.5rem;
         }
       }
     }
