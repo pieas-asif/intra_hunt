@@ -1,0 +1,25 @@
+.form {
+  text-decoration: none;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+
+  &__hero_search_input {
+    background-color: $color-white;
+
+    &:hover {
+      border: 1px solid $color-primary;
+    }
+
+    &:focus {
+      outline: 1px solid $color-primary;
+    }
+  }
+
+  &__newsletter_email_input {
+    background-color: $color-white;
+  }
+}

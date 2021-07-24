@@ -1,0 +1,52 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+<footer class="footer">
+    <div class="footer__section-one">
+        <div class="footer__section-one__brand">
+            <div class="footer__section-one__brand__identity">
+                <img src="{% static 'images/intraHunt_Light.svg' %}" alt="IntraHunt Logo"
+                     class="footer__section-one__brand__identity__logo">
+{#                <h2 class="footer__section-one__brand__identity__name">IntraHunt</h2>#}
+            </div>
+            <div class="footer__section-one__brand__link-cols">
+                <div class="footer__section-one__brand__link-cols__col">
+                    <a href="#" class="footer__section-one__brand__link-cols__col__link">About</a>
+                    <a href="#" class="footer__section-one__brand__link-cols__col__link">Press</a>
+                    <a href="#" class="footer__section-one__brand__link-cols__col__link">Careers</a>
+                </div>
+                <div class="footer__section-one__brand__link-cols__col">
+                    <a href="#" class="footer__section-one__brand__link-cols__col__link">Safety</a>
+                    <a href="#" class="footer__section-one__brand__link-cols__col__link">Customer Care</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__section-one__newsletter">
+            <h3 class="footer__section-one__newsletter__title">Subscribe to our Newsletter</h3>
+            <form method="post" class="footer__section-one__newsletter__form">
+                {% crispy newsletter_form %}
+                {% csrf_token %}
+                <a href="#" type="submit" class="footer__section-one__newsletter__form__submit btn btn__success">Submit</a>
+            </form>
+        </div>
+    </div>
+    <div class="footer__section-two">
+        <div class="footer__section-two__important-links">
+            <a href="#" class="footer__section-two__important-links__link">Terms & Conditions</a>
+            <a href="#" class="footer__section-two__important-links__link">Privacy Policy</a>
+            <a href="#" class="footer__section-two__important-links__link">Code of Conduct</a>
+            <a href="#" class="footer__section-two__important-links__link">Site Map</a>
+        </div>
+        <div class="footer__section-two__copyright-social">
+            <div class="footer__section-two__copyright-social__copyright">
+                <p class="footer__section-two__copyright-social__copyright__text">2021, IntraHunt. All rights Reserved</p>
+            </div>
+            <div class="footer__section-two__copyright-social__socials">
+                <a href="#" class="footer__section-two__copyright-social__socials__link"><i class="lni lni-facebook-oval"></i></a>
+                <a href="#" class="footer__section-two__copyright-social__socials__link"><i class="lni lni-twitter-filled"></i></a>
+                <a href="#" class="footer__section-two__copyright-social__socials__link"><i class="lni lni-instagram-original"></i></a>
+                <a href="#" class="footer__section-two__copyright-social__socials__link"><i class="lni lni-linkedin-original"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

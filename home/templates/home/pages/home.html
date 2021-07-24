@@ -1,0 +1,81 @@
+{% extends 'home/structures/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    IntraHunt | Best Place To Start Your Career
+{% endblock title %}
+
+{% block content %}
+    <div class="hero">
+        <div class="hero__nav">
+            <div class="hero__nav__banner">
+                <img src="{% static 'images/intraHunt_Dark.svg' %}" alt="IntraHunt Logo"
+                     class="hero__nav__banner__logo">
+            </div>
+
+            <div class="hero__nav__links">
+                <a href="#" class="hero__nav__links__link btn">Post Work</a>
+                <a href="#" class="hero__nav__links__link btn btn__primary">SIGN IN</a>
+            </div>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__content__title">Find your dream jobs with us easily</h1>
+            <div class="hero__content__search">
+                <form method="get" action="" class="hero__content__search__form">
+                    {% crispy search_form %}
+                    <a href="#" type="submit" class="hero__content__search__form__search btn btn__outline-primary">
+                        <i class="lni lni-search-alt"></i> Search
+                    </a>
+                </form>
+            </div>
+            <div class="hero__content__browse">
+                <a href="#" class="btn btn__primary"><i class="lni lni-book"></i> Browse All Jobs</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="brand-content">
+            <div class="brand-content__right-img">
+                <div class="brand-content__right-img__left">
+                    <h2 class="brand-content__right-img__left__title">Fresh Jobs, For Freshers</h2>
+                    <p class="brand-content__right-img__left__content">After freshly graduated from university, you are
+                        so excited to finally transition from student life to professional life. But that happiness
+                        quickly die out when you see every single job listing wants previous work experience.</p>
+                    <p class="brand-content__right-img__left__content">But, worry no more. You've found yourself on the
+                        right place. We at IntraHunt will only show you the job listing, that is curated for you and
+                        most importantly, won't require any previous work experience.*</p>
+                </div>
+                <div class="brand-content__right-img__right">
+                    <img src="{% static 'images/3.png' %}" class="brand-content__right-img__right__img" alt="">
+                </div>
+            </div>
+            <div class="brand-content__left-img">
+                <div class="brand-content__left-img__left">
+                    <img src="{% static 'images/2.png' %}" class="brand-content__left-img__left__img" alt="">
+                </div>
+                <div class="brand-content__left-img__right">
+                    <h2 class="brand-content__left-img__right__title">Your Home, Your Office</h2>
+                    <p class="brand-content__left-img__right__content">In this pandemic days, it is wise and safe to
+                        stay at home. But how can you start your career staying home?</p>
+                    <p class="brand-content__left-img__right__content">You've guessed right. You can start your career
+                        by starting working from home. At IntraHunt, you can only get Remote Job Listings if you set
+                        your job preference to only remote jobs.</p>
+                </div>
+            </div>
+            <div class="brand-content__right-img">
+                <div class="brand-content__right-img__left">
+                    <h2 class="brand-content__right-img__left__title">Get Your Dream Team</h2>
+                    <p class="brand-content__right-img__left__content">Professional life is all about having a dream
+                        team. Where you work together, track features and bugs whether it's remote or on site.</p>
+                    <p class="brand-content__right-img__left__content">Alongside with Remote Jobs, IntraHunt will help
+                        you find Jobs near you, so that you can work there on site with all of your new colleges. No
+                        more working alone.</p>
+                </div>
+                <div class="brand-content__right-img__right">
+                    <img src="{% static 'images/1.png' %}" class="brand-content__right-img__right__img" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
