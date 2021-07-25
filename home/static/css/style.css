@@ -13,6 +13,15 @@ body {
   padding: 0 7rem;
 }
 
+#div_id_search_field {
+  margin-bottom: 0 !important;
+}
+
+.form-control:focus {
+  border-color: #fe019a;
+  box-shadow: 0 0 0 0.2rem rgba(254, 1, 154, 0.25);
+}
+
 .btn {
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -115,7 +124,7 @@ body {
 .hero__content__search {
   display: flex;
   flex-direction: row;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
 }
 
 .nav {
