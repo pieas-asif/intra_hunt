@@ -11,3 +11,12 @@ body {
 .container {
   padding: 0 7rem;
 }
+
+#div_id_search_field {
+  margin-bottom: 0 !important;
+}
+
+.form-control:focus {
+  border-color: $color-primary;
+  box-shadow: 0 0 0 .2rem $color-transparent-primary;
+}

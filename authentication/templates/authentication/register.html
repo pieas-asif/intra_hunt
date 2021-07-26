@@ -1,0 +1,25 @@
+{% extends 'authentication/auth_base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Register | intraHunt
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today</legend>
+            {% crispy form %}
+            <button class="btn btn__primary" type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already have an Account? <a href="#" class="ml-2">Sign In</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

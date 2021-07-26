@@ -1,0 +1,16 @@
+{% extends 'home/structures/structure.html' %}
+
+{% block title %}
+LANDING | IntraHunt
+{% endblock title %}
+
+{% block section %}
+    <div class="container">
+        <h1>{{ post.title }}</h1>
+        <h4>{{ post.date_posted|date:"F d, Y" }}</h4>
+        <h2>Posted by {{ post.author.username }}</h2>
+        <p>Tags: {{ post.tags }}</p>
+        <br>
+        <p>{{ post.content }}</p>
+    </div>
+{% endblock section %}
