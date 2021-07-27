@@ -8,17 +8,18 @@ Register | intraHunt
 
 {% block content %}
 <div class="container">
+<h1 class="mb-4">Join intraHunt</h1>
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Join Today</legend>
+
             {% crispy form %}
             <button class="btn btn__primary" type="submit">Submit</button>
         </fieldset>
     </form>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Already have an Account? <a href="#" class="ml-2">Sign In</a>
+            Already have an Account? <a href="{% url 'login' %}" class="ml-2">Log In</a>
         </small>
     </div>
 </div>
