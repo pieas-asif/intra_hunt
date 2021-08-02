@@ -12,6 +12,8 @@ class Post(models.Model):
     tags = models.CharField(max_length=255)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
+    deadline = models.DateTimeField(blank=True)
+    salary = models.CharField(max_length=50)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

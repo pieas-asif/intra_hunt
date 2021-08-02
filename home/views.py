@@ -31,3 +31,12 @@ def post_page(request):
         'post': Post.objects.first()
     }
     return render(request, 'home/pages/post.html', context)
+
+
+def find_work_view(request):
+    form = NewsletterForm()
+    context = {
+        'newsletter_form': form,
+        'posts': Post.objects.all()
+    }
+    return render(request, 'home/pages/find_work.html', context)
