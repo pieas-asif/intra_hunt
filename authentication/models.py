@@ -8,6 +8,7 @@ class UserProfile(models.Model):
         ('IN', 'Individual')
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, blank=False)
     type = models.CharField(max_length=2, choices=USER_TYPE_CHOICES)
     image = models.ImageField(default='default.png', upload_to='profile_pictures')
 

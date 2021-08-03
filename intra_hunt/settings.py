@@ -140,3 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Crispy Template Pack
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Screen after successful Login
+LOGIN_REDIRECT_URL = 'landing'
+LOGIN_URL = 'login'
