@@ -1,8 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from .forms import NewsletterForm, HeroJobSearchForm
+from .forms import NewsletterForm, HeroJobSearchForm, PostForm
 from .models import Post
 
 
@@ -44,3 +44,24 @@ def find_work_view(request):
         'posts': paginator.get_page(page_number)
     }
     return render(request, 'home/pages/find_work.html', context)
+
+
+@login_required
+def post_work_view(request):
+    if request.method == "POST":
+        newsletter_form = NewsletterForm(request.POST)
+        post_form = PostForm(request.POST)
+        if post_form.is_valid():
+            post_form.save()
+            return redirect('find-work')
+        elif newsletter_form.is_valid():
+            newsletter_form.save()
+    else:
+        newsletter_form = NewsletterForm()
+        post_form = PostForm()
+
+    context = {
+        'newsletter_form': newsletter_form,
+        'post_form': post_form
+    }
+    return render(request, 'home/pages/create_post.html', context)

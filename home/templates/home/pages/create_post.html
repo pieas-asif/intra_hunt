@@ -1,0 +1,17 @@
+{% extends 'home/structures/structure.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Create Post | IntraHunt
+{% endblock title %}
+
+{% block section %}
+<div class="container">
+    <h1 class="text-center mt-5">Post a Job</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% crispy post_form %}
+        <button type="submit" class="btn btn__primary mb-4">Post Job</button>
+    </form>
+</div>
+{% endblock section %}

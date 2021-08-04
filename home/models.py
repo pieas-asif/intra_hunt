@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
+from tinymce import models as tiny_models
 
 
 class Newsletter(models.Model):
@@ -10,7 +11,7 @@ class Newsletter(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=255)
     tags = models.CharField(max_length=255)
-    content = models.TextField()
+    content = tiny_models.HTMLField()
     date_posted = models.DateTimeField(default=timezone.now)
     deadline = models.DateTimeField(blank=True)
     salary = models.CharField(max_length=50)

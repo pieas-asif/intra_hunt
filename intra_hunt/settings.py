@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third party applications
+    'tinymce',
     'crispy_forms',
     # intraHunt applications
     'authentication.apps.AuthenticationConfig',

@@ -1,7 +1,7 @@
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Field
 from django import forms
-from .models import Newsletter
+from .models import Newsletter, Post
 
 
 class NewsletterForm(forms.ModelForm):
@@ -28,3 +28,9 @@ class HeroJobSearchForm(forms.Form):
         self.helper.layout = Layout(
             Field('search_field', css_class='form form__hero_search_input', placeholder='e.g. data scientist')
         )
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'salary', 'deadline', 'content']
